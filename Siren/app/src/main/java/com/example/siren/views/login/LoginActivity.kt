@@ -8,6 +8,7 @@ import com.example.siren.MainActivity
 import com.example.siren.ProviderType
 import com.example.siren.databinding.ActivityLoginBinding
 import com.example.siren.utils.toast
+import com.example.siren.views.register.RegisterActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 
@@ -23,6 +24,8 @@ class LoginActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         auth = FirebaseAuth.getInstance()
+        binding.btnRegister.setOnClickListener { navigateToRegister() }
+        binding.btnGoogle.setOnClickListener { registerGoogle() }
         login()
     }
 
@@ -32,19 +35,22 @@ class LoginActivity : AppCompatActivity() {
             val email = binding.etEmail.text.toString()
             val password = binding.etPassword.text.toString()
 
-            auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    navigateToHome(
-                        task.result.user?.email ?: "",
-                        task.result.user?.uid ?: "",
-                        ProviderType.BASIC
-                    )
-                    finish()
-                } else {
-                    showAlert()
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+
+                auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        navigateToHome(
+                            task.result.user?.email ?: "",
+                            task.result.user?.uid ?: "",
+                            ProviderType.BASIC
+                        )
+                        finish()
+                    } else {
+                        showAlert()
+                    }
+                }.addOnFailureListener { exception ->
+                    exception.localizedMessage?.let { toast(this, it) }
                 }
-            }.addOnFailureListener { exception ->
-                exception.localizedMessage?.let { toast(this, it) }
             }
         }
     }
@@ -65,5 +71,14 @@ class LoginActivity : AppCompatActivity() {
         builder.setPositiveButton("Accept", null)
         val dialog: AlertDialog = builder.create()
         dialog.show()
+    }
+
+    private fun navigateToRegister() {
+        startActivity(Intent(this, RegisterActivity::class.java))
+    }
+
+    private fun registerGoogle() {
+        // TODO: Set auth with google
+        toast(this, "Sorry, This feature will available soon")
     }
 }

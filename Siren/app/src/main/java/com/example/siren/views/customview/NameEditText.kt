@@ -1,7 +1,6 @@
 package com.example.siren.views.customview
 
 import android.content.Context
-import android.graphics.drawable.Drawable
 import android.text.Editable
 import android.text.InputType
 import android.text.TextWatcher
@@ -12,8 +11,6 @@ import androidx.appcompat.widget.AppCompatEditText
 import com.example.siren.R
 
 class NameEditText: AppCompatEditText, View.OnTouchListener {
-
-    private lateinit var userIcon: Drawable
 
     constructor(context: Context) : super(context) {
         init()
@@ -56,19 +53,5 @@ class NameEditText: AppCompatEditText, View.OnTouchListener {
 
     override fun onTouch(p0: View?, p1: MotionEvent?): Boolean {
         return false
-    }
-
-    private fun setButtonDrawables(
-        startOfText: Drawable? = null,
-        topOfTheText: Drawable? = null,
-        endOfTheText: Drawable? = null,
-        bottomOfTheText: Drawable? = null
-    ) {
-        setCompoundDrawablesWithIntrinsicBounds(
-            startOfText,
-            topOfTheText,
-            endOfTheText,
-            bottomOfTheText,
-        )
     }
 }

@@ -15,7 +15,6 @@ drawable bg_tab
 drawable bg_tab_indicator
 drawable bg_txt_btn
 drawable bottom_nav_selector
-drawable family_1
 drawable google_img
 drawable ic_account_circle
 drawable ic_filled_star
@@ -25,11 +24,11 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable ic_share
 drawable ic_video
-drawable intro1
-drawable intro2
+drawable intro_img
 drawable login_img
 drawable register_img
 drawable toggle_favorite
+drawable under_construction
 id actionHome
 id actionProfile
 id actionVideo
@@ -37,6 +36,7 @@ id bottomNavigationView
 id btnGoogle
 id btnLogin
 id btnRegister
+id btnSignOut
 id detailActivity
 id detailFragment
 id etEmail
@@ -102,6 +102,7 @@ string google_storage_bucket
 string hello
 string home
 string login
+string logout
 string name
 string password
 string password_length_error

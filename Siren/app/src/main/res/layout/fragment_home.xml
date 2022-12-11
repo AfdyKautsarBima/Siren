@@ -26,6 +26,7 @@
         android:textColor="#F2796B"
         android:textSize="20sp"
         android:text="@string/user"
+        android:layout_marginStart="4dp"
         app:layout_constraintBottom_toBottomOf="@id/tvHello"
         app:layout_constraintStart_toEndOf="@id/tvHello"
         app:layout_constraintTop_toTopOf="@id/tvHello"/>

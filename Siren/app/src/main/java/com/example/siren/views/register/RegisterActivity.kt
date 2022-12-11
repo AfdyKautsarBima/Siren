@@ -31,6 +31,7 @@ class RegisterActivity : AppCompatActivity() {
         databaseReference = databases?.reference!!.child("Users")
 
         binding.btnLogin.setOnClickListener { navigateToLogin() }
+        binding.btnGoogle.setOnClickListener { loginGoogle() }
         register()
     }
 
@@ -41,22 +42,25 @@ class RegisterActivity : AppCompatActivity() {
             val email = binding.etEmail.text.toString()
             val password = binding.etPassword.text.toString()
 
-            auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-                    val currentUser = auth.currentUser
-                    val currentUserDb = databaseReference?.child(currentUser?.uid!!)
-                    currentUserDb?.child("Name")?.setValue(name)
-                    currentUserDb?.child("Email")?.setValue(email)
-                    currentUserDb?.child("Password")?.setValue(password)
+            if (name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
 
-                    toast(this, "Registration Success, please login")
-                    val intent = Intent(this, LoginActivity::class.java)
-                    startActivity(intent)
-                } else {
-                    toast(this, "Registration Failed, please try again!")
+                auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        val currentUser = auth.currentUser
+                        val currentUserDb = databaseReference?.child(currentUser?.uid!!)
+                        currentUserDb?.child("Name")?.setValue(name)
+                        currentUserDb?.child("Email")?.setValue(email)
+                        currentUserDb?.child("Password")?.setValue(password)
+
+                        toast(this, "Registration Success, please login")
+                        val intent = Intent(this, LoginActivity::class.java)
+                        startActivity(intent)
+                    } else {
+                        toast(this, "Registration Failed, please try again!")
+                    }
+                }.addOnFailureListener { exception ->
+                    exception.localizedMessage?.let { toast(this, it) }
                 }
-            }.addOnFailureListener { exception ->
-                exception.localizedMessage?.let { toast(this, it) }
             }
         }
     }
@@ -64,5 +68,10 @@ class RegisterActivity : AppCompatActivity() {
     private fun navigateToLogin() {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
+    }
+
+    private fun loginGoogle() {
+        // TODO: Set auth with google
+        toast(this, "Sorry, This feature will available soon")
     }
 }

@@ -1,7 +1,6 @@
 package com.example.siren.views.customview
 
 import android.content.Context
-import android.graphics.drawable.Drawable
 import android.text.Editable
 import android.text.InputType
 import android.text.TextWatcher
@@ -10,12 +9,9 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import androidx.appcompat.widget.AppCompatEditText
-import androidx.core.content.ContextCompat
 import com.example.siren.R
 
 class PasswordEditText : AppCompatEditText, View.OnTouchListener {
-
-    private lateinit var passwordIcon: Drawable
 
     constructor(context: Context) : super(context) {
         init()
@@ -63,19 +59,4 @@ class PasswordEditText : AppCompatEditText, View.OnTouchListener {
     override fun onTouch(p0: View?, p1: MotionEvent?): Boolean {
         return false
     }
-
-    private fun setButtonDrawables(
-        startOfText: Drawable? = null,
-        topOfTheText: Drawable? = null,
-        endOfTheText: Drawable? = null,
-        bottomOfTheText: Drawable? = null
-    ) {
-        setCompoundDrawablesWithIntrinsicBounds(
-            startOfText,
-            topOfTheText,
-            endOfTheText,
-            bottomOfTheText,
-        )
-    }
-
 }

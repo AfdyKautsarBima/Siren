@@ -22,6 +22,7 @@
     <string name="email_pattern_error">Email is not valid.</string>
     <string name="field_empty">Field cannot be empty</string>
     <string name="password_length_error">Min. length password is 6 characters.</string>
-    <string name="txt_have_account">Punya kun?</string>
+    <string name="txt_have_account">Punya Akun?</string>
     <string name="txt_register_google">Atau daftar dengan</string>
+    <string name="logout">Logout</string>
 </resources>

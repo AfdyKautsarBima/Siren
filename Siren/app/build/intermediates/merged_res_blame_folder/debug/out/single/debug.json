@@ -32,10 +32,6 @@
         "source": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-main-55:\\drawable\\bg_btn.xml"
     },
     {
-        "merged": "com.example.siren.app-merged_res-53:/layout_activity_register.xml.flat",
-        "source": "com.example.siren.app-main-55:/layout/activity_register.xml"
-    },
-    {
         "merged": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-merged_res-53:\\drawable_intro2.jpg.flat",
         "source": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-main-55:\\drawable\\intro2.jpg"
     },
@@ -48,6 +44,10 @@
         "source": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-pngs-48:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
     {
+        "merged": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-merged_res-53:\\drawable_under_construction.png.flat",
+        "source": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-main-55:\\drawable\\under_construction.png"
+    },
+    {
         "merged": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-merged_res-53:\\drawable_toggle_favorite.xml.flat",
         "source": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-main-55:\\drawable\\toggle_favorite.xml"
     },
@@ -58,6 +58,10 @@
     {
         "merged": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-merged_res-53:\\drawable_google_img.png.flat",
         "source": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-main-55:\\drawable\\google_img.png"
+    },
+    {
+        "merged": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-merged_res-53:\\drawable_intro_img.png.flat",
+        "source": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-main-55:\\drawable\\intro_img.png"
     },
     {
         "merged": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-merged_res-53:\\drawable_bg_edit_text.xml.flat",
@@ -186,6 +190,10 @@
     {
         "merged": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-merged_res-53:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-main-55:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.siren.app-merged_res-53:/layout_fragment_profile.xml.flat",
+        "source": "com.example.siren.app-main-55:/layout/fragment_profile.xml"
     },
     {
         "merged": "C:\\Users\\rully\\.gradle\\daemon\\7.4\\com.example.siren.app-merged_res-53:\\navigation_nav_graph.xml.flat",
